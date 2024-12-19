@@ -2,7 +2,7 @@ const calculateBtn = document.getElementById("calculate-btn");
 
 function getValues() {
     const result = document.getElementById("result");
-    result.innerHTML = ''; // Limpa o conteúdo anterior
+    result.innerHTML = '';
 
     let date = new Date();
     let thisDay = date.getDate();
@@ -13,7 +13,6 @@ function getValues() {
     let month = Number(document.getElementById("month").value);
     let year = Number(document.getElementById("year").value);
 
-    // Validações
     if (String(day).length > 2) {
         alert('Quantidade de caracteres para dia inválidos!');
     } else if (String(month).length > 2) {
@@ -27,7 +26,7 @@ function getValues() {
         let calculateAgeInDays = thisDay - day;
 
         result.innerHTML += `<p>Você tem ${calculateAgeInMonths} meses e ${calculateAgeInDays} dias!</p>`;
-        result.style.display = "block"; // Exibe o resultado após o cálculo
+        result.style.display = "block";
     } else {
         if (thisDay < 10 || day < 10 || thisMonth < 10 || month < 10) {
             if (thisDay < 10) {
@@ -53,7 +52,7 @@ function getValues() {
 
         if (calculateAgeInDays < 0) {
             calculateAgeInMonths--;
-            calculateAgeInDays += new Date(thisYear, thisMonth - 1, 0).getDate(); // Dias no mês anterior
+            calculateAgeInDays += new Date(thisYear, thisMonth - 1, 0).getDate();
         }
 
         if (calculateAgeInMonths < 0) {
@@ -62,7 +61,7 @@ function getValues() {
         }
 
         result.innerHTML += `<p>Você tem ${calculateAgeInYears} anos, ${calculateAgeInMonths} meses e ${calculateAgeInDays} dias!</p>`;
-        result.style.display = "block"; // Exibe o resultado após o cálculo
+        result.style.display = "block";
     }
 }
 
