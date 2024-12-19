@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #FF6F61, #FFC107, #4CAF50, #2196F3);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    flex-direction: column; 
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #FFEB3B;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #FFF;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    font-size: 16px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #FFC107;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+}
+
+button {
+    background-color: #1E88E5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.4);
+    transition: 0.3s ease-in-out;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do botão */
+}
+
+button:hover {
+    background-color: #1565C0;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 111, 97, 0.6);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#result {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display: none;
+    margin-top: 30px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s ease-in-out;
+    min-height: 60px; 
+}
+
+#result p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+p, span, label {
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#result p:hover {
+    color: #FFEB3B;
+    text-decoration: underline;
+    cursor: pointer;
+}
